@@ -33,7 +33,7 @@ public class BootStrapData implements CommandLineRunner {
     public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
-        this.outsourcedPartRepository=outsourcedPartRepository;
+        this.outsourcedPartRepository = outsourcedPartRepository;
     }
 
     @Override
