@@ -12,7 +12,23 @@
 - Line 51-143: I added the names of the parts to the table along with the prices, and changed the background color of the table.
 - Line 193-247: I added the names of the proucts and their costs to the table, and changed the background color of the table.
 
-D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+## D. I created a new file <b>about.html</b> and made the following:
+- Line 1-12: Initialized file properly and created a <head> section.
+- Line 13-137: I created < style > tags and within those tags I edited and formatted the page's contents with CSS, including:
+    >- 13-20: I added a and styled the background image for the entire page.
+    >- 23-76: background image and color for each container as well as display, padding, positioning and anything needed to format each container.
+    >- 81-107: Styling for all the text in the page.
+    >- Line 109-133: Styling for the buttons used in the page. I crated 2 that both point to mainscreen.html. I changed the color, the edges, and added effects on hover.
+
+- Line 140-152: I created a container to use as a header for the page title. I also added a "PRODUCT" button that directs the user to mainscreen.
+- Line 155-169: I created a container for the first mission statement. This container also has 2 more containers nested inside of it, which I used to style the page and add text.
+- Line 173-188: This container is for the second mission statement and also has 2 conatiners nested inside that are used to style the page.
+- Line 192-217: This is the container for the third mission statement, fomratted similarly to the previous two statement containers. Within this conntainer I added another button labeled "SHOP NOW!" which directs the user to mainscreen.html.
+
+<b>I also made a change to mainscreen.html</b>:
+- Line 277-281: I created a button that directs the user to the ABOUT page.
+- Line 109-135: I styled the button I added to the page. I changed the color, the edges, and added effects on hover. 
+
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 

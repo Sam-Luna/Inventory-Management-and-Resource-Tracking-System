@@ -52,7 +52,8 @@
     </style>
 </head>
 <body>
-<div class="Title" style="background-color: rgb(128 86 187 / 0.86); position: relative; height: 100px ;">
+<div class="Title" style="background-color: rgb(128 86 187 / 0.86); position: relative; height: 120px ;">
+    <br>
     <h1 style="font-size: 50px">ROGUE-X PC Components and Prebuilds</h1>
 </div>
 <div class="container" style="background-color: rgb(128 86 187 / 0.44) " >
@@ -94,9 +95,9 @@
             </td>
         </tr>
         <tr th:each="tempPart : ${parts}">
-            <td th:text="${tempPart.name}">Processor (CPU)</td>
-            <td th:text="${tempPart.price}">225</td>
-            <td th:text="${tempPart.inv}">1</td>
+            <td>Processor (CPU)</td>
+            <td >225</td>
+            <td>1</td>
             <td><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>

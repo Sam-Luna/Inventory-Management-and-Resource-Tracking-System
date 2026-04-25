@@ -133,14 +133,18 @@
         }
 
     </style>
-
 </head>
+
 <body>
 <!--Page header-->
 <div class="Title" style="background-color: rgb(2 2 5)" >
     <br>
     <div style="position:absolute">
+
+        <form th:action="@{/mainscreen}">
         <button class= "button" name="products">PRODUCTS</button>
+        </form>
+
     </div>
 
     <h1> ABOUT ROGUE-X </h1>
@@ -156,14 +160,12 @@
         <h2 style="padding: 100px;">EMPOWERING EXCELLENCE</h2>
 
     <div class="container statement1">
-    <p>At Rogue-X we continually enrich the lives of PC Industry professionals, content creators,
+    <p>At Rogue-X we continually enrich the lives of PC Industry professionals, content creators, newbies
         and gaming enthusiasts by delivering unparalleled quality experiences through
-        dedication to innovation, exceptional products, and outstanding service.
+        dedication. Our priorities are: innovation, exceptional products, and outstanding service.
         <br>
     </div>
-
     </div>
-
 </div>
 
 <!--Second statement paragraph-->
@@ -204,7 +206,11 @@
         Feel free to calls with any questions regarding equipment, recommendations, and configuration options.</p>
     <br>
     </div>
-        <div> <button class= "button" name="shop">SHOP NOW!</button> </div>
+        <div>
+            <form th:action="@{/mainscreen}">
+                <button class= "button" name="shop">SHOP NOW!</button>
+            </form>
+        </div>
 
     </div>
 
