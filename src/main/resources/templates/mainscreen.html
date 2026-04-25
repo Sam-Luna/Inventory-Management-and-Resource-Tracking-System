@@ -21,17 +21,41 @@
     </style>
 
     <title>ROGUE-X</title>
-    <style> h1 { font-family: "Candara"; font-weight: bold; color: rgb(255 255 255); text-align: center;
+    <style> h1 { font-family: "Candara"; font-weight: bold; color: rgb(255 255 255); text-align: center; font-size: 4rem;
     }</style>
 
     <style> h2 { font-family: 'Malgun Gothic Semilight'; color: white;} </style>
     <style> form { font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;} </style>
+    <!--styling for buttons-->
+    <style>
+        .button{
+            margin-left:  45%;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
 
+            font-family: "Malgun Gothic";
+            font-size: 20px;
+            color: #8056bb;
+            border: none;
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+        .button:hover{
+            color: white;
+            background-color: #8056bb;
+            transition-duration: 0.5s;
+        }
+    </style>
 </head>
 <body>
-
-<div class="container" style="background-color: rgb(128 86 187 / 0.44) " >
+<div class="Title" style="background-color: rgb(128 86 187 / 0.86); position: relative; height: 100px ;">
     <h1 style="font-size: 50px">ROGUE-X PC Components and Prebuilds</h1>
+</div>
+<div class="container" style="background-color: rgb(128 86 187 / 0.44) " >
     <hr>
     <h2>PC Components</h2>
 
@@ -248,5 +272,12 @@
         </tbody>
     </table>
 </div>
+<!-- button to the about page-->
+<div style="position:flex">
+    <form th:action="@{/about}">
+    <button class= "button" name="products"> Learn More About Rogue-X </button>
+    </form>
+</div>
+
 </body>
 </html>
