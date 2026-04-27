@@ -12,7 +12,7 @@
 - Line 51-143: I added the names of the parts to the table along with the prices, and changed the background color of the table.
 - Line 193-247: I added the names of the proucts and their costs to the table, and changed the background color of the table.
 
-## D. I created a new file <b>about.html</b> and made the following:
+### D. I created a new file <b>about.html</b> and made the following:
 - Line 1-12: Initialized file properly and created a <head> section.
 - Line 13-137: I created < style > tags and within those tags I edited and formatted the page's contents with CSS, including:
     >- 13-20: I added a and styled the background image for the entire page.
@@ -30,9 +30,18 @@
 - Line 109-135: I styled the button I added to the page. I changed the color, the edges, and added effects on hover. 
 
 
-E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
+###  E. I made the following changes to the file <b>BootStrapData.java</b>:
+- Line 44: I created an IF statement that ensures my sample inventory for Inhouse and Oursource parts is only added if the partRepository is empty. This is done to prevent multiplicate items.
+- Line 46-51: I created 6 InhousePart objects. I created 6 because my company sells PC components and the InhouseParts are the peripheral components needed for a PC build.
+- Line 55-89: I initialized each of the InhousePart objects I created. This was done by setting the Id, name, price and inventory for each part. I also saved each one to the partRepository.
+- Line 92-97: I created 6 OursourcedPart Objects. These are represented by the internal parts neede to build a PC; from the motherboard to the power supply.
+- Line 101-141: I initialized each of the OursourcePart objects I created and also saved each one to the repository.
+- Line 145: I created a second IF statement to ensure that my sample Products are only added if the productRepository is empty, to prevent multiplicate items from being added.
+- Line 146-159: I created and initialized 5 products representing a tier of PC a consumer can purhase from the company. Each object is created and intialized on the same line, followed by being added to the productRepository.
 
-Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
+I also made a change to the <b>mainscreen.html</b> page:
+- Line 97-197: When I first started the project, the instructions for part C called for the user interface to include the names of the parts. I did this by copying the existing code that created a row for the parts. I then reused this code to manually add each part needed into the html file to be displayed. However, since part E required me to add these parts using Java, I commented out the blocks of code from part A. 
+
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 •  The “Buy Now” button must be next to the buttons that update and delete products.
