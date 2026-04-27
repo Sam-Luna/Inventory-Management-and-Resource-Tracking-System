@@ -15,6 +15,7 @@ import java.util.Set;
  *
  *
  */
+
 @Entity
 @Table(name="Products")
 @ValidProductPrice
@@ -90,6 +91,7 @@ public class Product implements Serializable {
     public String toString(){
         return this.name;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
