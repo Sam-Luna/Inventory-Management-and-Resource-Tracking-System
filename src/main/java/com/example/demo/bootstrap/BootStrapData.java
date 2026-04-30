@@ -56,36 +56,48 @@ public class BootStrapData implements CommandLineRunner {
             pcCase.setName("Lavender Case");
             pcCase.setPrice(193.99);
             pcCase.setInv(70);
+            pcCase.setMinInv(1);
+            pcCase.setMaxInv(100);
             partRepository.save(pcCase);
 
             cooler.setId(2);
             cooler.setName("Thermalight White RGB Cooler");
             cooler.setPrice(33.93);
             cooler.setInv(66);
+            cooler.setMinInv(1);
+            cooler.setMaxInv(100);
             partRepository.save(cooler);
 
             monitor.setId(3);
             monitor.setName("Purple 37in Monitor");
             monitor.setPrice(143.99);
             monitor.setInv(50);
+            monitor.setMinInv(1);
+            monitor.setMaxInv(100);
             partRepository.save(monitor);
 
             keyboard.setId(4);
             keyboard.setName("White & Purple AK980 Keyboard");
             keyboard.setPrice(193.99);
             keyboard.setInv(80);
+            keyboard.setMinInv(1);
+            keyboard.setMaxInv(100);
             partRepository.save(keyboard);
 
             mouse.setId(5);
             mouse.setName("White Ergonomic Mouse");
             mouse.setPrice(25.99);
             mouse.setInv(72);
+            mouse.setMinInv(1);
+            mouse.setMaxInv(100);
             partRepository.save(mouse);
 
             speakers.setId(6);
             speakers.setName("White SoundBar");
             speakers.setPrice(43.98);
             speakers.setInv(92);
+            speakers.setMinInv(1);
+            speakers.setMaxInv(100);
             partRepository.save(speakers);
 
             //objects created from OutsourcedParts
@@ -102,6 +114,8 @@ public class BootStrapData implements CommandLineRunner {
             motherboard.setName("B850 WIFI7");
             motherboard.setPrice(229.19);
             motherboard.setInv(92);
+            motherboard.setMinInv(1);
+            motherboard.setMaxInv(100);
             motherboard.setCompanyName("Gigabyte");
             outsourcedPartRepository.save(motherboard);
 
@@ -109,6 +123,8 @@ public class BootStrapData implements CommandLineRunner {
             processor.setName("Ryzen 5 9600X");
             processor.setPrice(181.97);
             processor.setInv(82);
+            processor.setMinInv(1);
+            processor.setMaxInv(100);
             processor.setCompanyName("AMD");
             outsourcedPartRepository.save(processor);
 
@@ -116,6 +132,8 @@ public class BootStrapData implements CommandLineRunner {
             graphicsCard.setName("9070XT 16GB");
             graphicsCard.setPrice(749.99);
             graphicsCard.setInv(92);
+            graphicsCard.setMinInv(1);
+            graphicsCard.setMaxInv(100);
             graphicsCard.setCompanyName("ASRock");
             outsourcedPartRepository.save(graphicsCard);
 
@@ -123,6 +141,8 @@ public class BootStrapData implements CommandLineRunner {
             ram.setName("Elite 32GB DDR5 Memory");
             ram.setPrice(434.99);
             ram.setInv(49);
+            ram.setMinInv(1);
+            ram.setMaxInv(100);
             ram.setCompanyName("Patriot Viper");
             outsourcedPartRepository.save(ram);
 
@@ -130,6 +150,8 @@ public class BootStrapData implements CommandLineRunner {
             ssd.setName("990 EVO 2TB Solid State Drive");
             ssd.setPrice(209.99);
             ssd.setInv(99);
+            ssd.setMinInv(1);
+            ssd.setMaxInv(100);
             ssd.setCompanyName("Samsung");
             outsourcedPartRepository.save(ssd);
 
@@ -137,6 +159,8 @@ public class BootStrapData implements CommandLineRunner {
             powerSupply.setName("RM850e ATX Power Supply");
             powerSupply.setPrice(134.82);
             powerSupply.setInv(85);
+            powerSupply.setMinInv(1);
+            powerSupply.setMaxInv(100);
             powerSupply.setCompanyName("Corsair");
             outsourcedPartRepository.save(powerSupply);
         }// end of IF statement

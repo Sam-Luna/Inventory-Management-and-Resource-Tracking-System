@@ -1,6 +1,7 @@
 package com.example.demo.domain;
 
 import com.example.demo.validators.ValidDeletePart;
+import com.example.demo.validators.ValidInventory;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -19,6 +20,7 @@ import java.util.Set;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
 @Table(name="Parts")
+@ValidInventory
 public abstract class Part implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,6 +30,11 @@ public abstract class Part implements Serializable {
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
+    /*inventory max and min variables*/
+    @Min(value = 0, message = "Minimum inventory value must be positive")
+    int minInv;
+    @Min(value = 0, message = "Maximum inventory value must be positive")
+    int maxInv;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
@@ -81,6 +88,19 @@ public abstract class Part implements Serializable {
     public void setInv(int inv) {
         this.inv = inv;
     }
+
+    //setter and getters for min and max inv
+    public void setMinInv(int minInv){
+        this.minInv = minInv;}
+
+    public int getMinInv(){
+        return this.minInv;}
+
+    public void setMaxInv(int maxInv){
+        this.maxInv = maxInv;}
+
+    public int getMaxInv(){
+        return this.maxInv;}
 
     public Set<Product> getProducts() {
         return products;
