@@ -105,6 +105,38 @@ Throughout the body I created divs to style the page to my liking:
 - Line 41-59: I styled the button to the mainscreen.
 - Line 11-71: I styled the tables, text and the divs I created for the page.
 
-I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+## NOTE: I commited and pushed task H, but the message says TASK G instead. The date of the push is May 1st, 2026.
+
+### TASK I:
+I made the following changes to <b>PartTest.java</b>:
+- Line 160-169: I created a @Test to test that the get/set methods for minInv() worked as intended for both partIn and partOut.
+- Line 171-179: I created another @Test to test that the set/get methods for maxInv() worked as intended for both partIn and partOut.
+
+I also made some optional layout changes to the following files:
+
+<b>Failure.html</b>:
+- Line 65: I created a new div "box" around the existing container to format the container to the middle of the page.
+- Line 20-25: These are the style properties of the div "box". 
+
+<b> Success.html</b>:
+
+- Line 18: I set the background-attachment to fixed to make sure the background photo stays stationary regardless of browser size, or scrolling.
+- Line 65: I created a new div "box" around the existing container to format the container to the middle of the page.
+- Line 20-25: These are the style properties of the div "box". 
+
+<b> InhousePartForm: </b>
+
+- Line 115-119: I moved the button to the mainscreen from outside the out-most DIV element, to inside it. 
+- Line 76: changed div class from container to box.
+- Line 20-28: Made styling changes to the "box" div to ensure it takes up the entire screen. It looked awkaward before.
+
+<b> OutsourcesPartForm.html: </b>
+
+- Line 114-118: I moved the button to the mainscreen from outside the out-most DIV element, to inside it.
+- Line 77: changed div class from container to box.
+- Line 20-29: Made styling changes to the "box" div to ensure it takes up the entire screen. It looked awkaward before.
+- Line 32: added padding to the inner DIV "fields" to ensure style is as desired.
+
+In <b> productForm.html </b> I made some minor styling changes to ensure clear formatting in the browser.
 
 J.  Remove the class files for any unused validators in order to clean your code.

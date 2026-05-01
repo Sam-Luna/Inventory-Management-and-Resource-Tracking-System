@@ -17,21 +17,24 @@
     </style>
     <!--style for containers and paragraphs.-->
     <style>
-        .container{
-            background-color: rgb(128 86 187 / 0.44) ;
-            position: relative;
-            height: 600px;
-            display: flex;
+        .box{
+            background-color: rgb(128 86 187 / 0.44);
+            background-size: cover;
+            display: grid;
+            gap: 10px;
+            padding-bottom: 50px;
             justify-content: center;
             width: 100%;
+            height: 100%;
         }
         .fields {
             text-align: left;
+            padding: 50px;
         }
         p {
-                font-family: "Malgun Gothic";
-                color: white;
-                font-size: 30px;
+            font-family: "Malgun Gothic";
+            color: white;
+            font-size: 30px;
         }
     </style>
 
@@ -71,7 +74,7 @@
     <h1 style="font-size: 50px">Outsourced Part Detail</h1>
 </div>
 
-<div class="container">
+<div class="box">
 
     <div class = "fields">
 
@@ -104,18 +107,15 @@
 
         </ul>
     </div>
-
     <p><input type="submit" value="Submit" /></p>
+    <br>
     </div>
     </form>
+    <div style="justify-content: center; display: flex;">
+        <form th:action="@{/mainscreen}">
+            <button class= "button" name="products">Main Menu</button>
+        </form>
+    </div>
 </div>
-
-<br>
-<div style="justify-content: center; display: flex;">
-    <form th:action="@{/mainscreen}">
-        <button class= "button" name="products">Main Menu</button>
-    </form>
-</div>
-
 </body>
 </html>

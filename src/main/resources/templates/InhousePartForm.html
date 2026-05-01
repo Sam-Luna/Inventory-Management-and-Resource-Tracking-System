@@ -17,13 +17,15 @@
     </style>
 
     <style>
-        .container{
-            background-color: rgb(128 86 187 / 0.44) ;
-            position: relative;
-            height: 600px;
-            display: flex;
+        .box{
+            background-color: rgb(128 86 187 / 0.44);
+            background-size: cover;
+            display: grid;
+            gap: 10px;
+            padding-bottom: 100px;
             justify-content: center;
             width: 100%;
+            height: 100%;
         }
         .fields {
             text-align: left;
@@ -71,7 +73,7 @@
     <h1 style="font-size: 50px">Inhouse Part Detail</h1>
 </div>
 
-<div class="container">
+<div class="box">
 
     <div class = "fields">
 
@@ -110,14 +112,12 @@
 </form>
     <p><errors path="price" cssClass=""error/></p>
 
-</div>
-<br>
-<div style="justify-content: center; display: flex;">
-    <form th:action="@{/mainscreen}">
-        <button class= "button" name="products">Main Screen</button>
-    </form>
-</div>
+    <div style="justify-content: center; display: flex;">
+        <form th:action="@{/mainscreen}">
+            <button class= "button" name="products">Main Screen</button>
+        </form>
+    </div>
 
-
+</div>
 </body>
 </html>
