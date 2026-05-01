@@ -18,18 +18,23 @@
             background-size: cover;
             background-attachment: fixed;
         }
-        .container{
+        .box{
             background-color: rgb(128 86 187 / 0.44) ;
             background-size: cover;
-            display: flex;
-            height: 100vh;
-            width: 100vw;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            gap: 10px;
+
+            padding: 100px;
+            display: grid;
+            height: 100%;
+            width: 100%;
 
         }
         .box1{
-            display: grid;
-            width: 40%;
-            justify-content: center;
+            flex: 1;
+            background-color: rgb(128 86 187 / 0.44);
+            padding: 50px;
         }
     </style>
     <!--styling for buttons-->
@@ -66,7 +71,7 @@
     </style>
 </head>
 <body>
-<div class="container" style="background-color: rgb(128 86 187 / 0.44);" >
+<div class="box" style="background-color: rgb(128 86 187 / 0.44);" >
 <div class="box1">
     <br>
 <form action="#" th:action="@{/showFormAddProduct}" th:object="${product}" method="POST"}>
@@ -94,7 +99,7 @@
     </form>
 
 </div>
-<div class= "box1" style="background-color: rgb(128 86 187 / 0.44);" >
+<div class= "box1" >
 <table class="table " style="background-color: rgb(220 202 253 / 0.92); width: 500xp;">
 
     <thead class="thead-dark" style=" background-color: rgb(128 86 187 / 0.44);">
@@ -117,7 +122,7 @@
     </body>
 </table>
 </div>
-    <div class= "box1" style="background-color: rgb(128 86 187 / 0.44);" >
+    <div class= "box1" >
     <table class="table table-bordered table-striped" style="background-color: rgb(220 202 253 / 0.92)">
         <thead class="thead-dark">
         <br>

@@ -91,11 +91,19 @@ I change the name of the file the persistent storage is saved to every time I ma
 - Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
 #### To display error message for low inventory when adding and updating products lowers the part inventory below the minimum I did the following:
-I edited the <b>productForm.html</b> file:
-- Line 
+In ValidEnufParts.java:
+- Line 20: I changed the default error message "Not enough inventory available to update the product."
 
-H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
-•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
+In EnufPartsValidator.java:
+
+- Line 39: I added a constraint validator to the existing IF statement to avoid a whitepage error. This prevents the parts inventory to be below zero when updating a product.
+- Lines 41-43: I created another IF statement to make sure an error was displayed for the user to prevent the associated part counts to go below the parts minimum allowed value set by the user. It outputs a separate error message: "Updating product would lower part inventory to below the minimum allowed value."
+
+#### Below are other **optional** changes I made to some of the <b>productForm.html</b> file:
+Throughout the body I created divs to style the page to my liking:
+- Line 96-99: The page was missing a link to the mainscreen; I created a button to fix this.
+- Line 41-59: I styled the button to the mainscreen.
+- Line 11-71: I styled the tables, text and the divs I created for the page.
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
