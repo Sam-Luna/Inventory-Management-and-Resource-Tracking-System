@@ -139,4 +139,4 @@ I also made some optional layout changes to the following files:
 
 In <b> productForm.html </b> I made some minor styling changes to ensure clear formatting in the browser.
 
-J.  Remove the class files for any unused validators in order to clean your code.
+### TASK J: I deleted the DeletePartValidator.java file.
