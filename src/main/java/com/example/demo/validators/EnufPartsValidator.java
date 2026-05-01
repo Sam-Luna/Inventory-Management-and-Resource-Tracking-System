@@ -26,14 +26,22 @@ public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, P
     }
 
     @Override
-    public boolean isValid(Product product, ConstraintValidatorContext constraintValidatorContext) {
+    public boolean isValid(Product product, ConstraintValidatorContext constraintValidatorContext){
+
         if(context==null) return true;
         if(context!=null)myContext=context;
         ProductService repo = myContext.getBean(ProductServiceImpl.class);
+
         if (product.getId() != 0) {
             Product myProduct = repo.findById((int) product.getId());
             for (Part p : myProduct.getParts()) {
-                if (p.getInv()<(product.getInv()-myProduct.getInv()))return false;
+                if(p.getInv()< (product.getInv()-myProduct.getInv())){
+                    constraintValidatorContext.buildConstraintViolationWithTemplate("Not enough inventory available to update the product.").addConstraintViolation();
+                    return false;}
+                if((p.getInv() - p.getMinInv())< (product.getInv()-myProduct.getInv())){
+                    constraintValidatorContext.buildConstraintViolationWithTemplate("Updating product would lower part inventory to below the minimum allowed value.").addConstraintViolation();
+                    return false;
+                }
             }
             return true;
         }

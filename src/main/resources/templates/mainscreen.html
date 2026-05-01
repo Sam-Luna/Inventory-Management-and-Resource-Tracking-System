@@ -87,7 +87,7 @@
 
         <tbody>
         <!-- I added the product parts as instructed-->
-        <tr th:each="tempPart : ${parts}" styler="background-color: white;">
+        <tr th:each="tempPart : ${parts}">
             <td th:text="${tempPart.name}">Motherboard</td>
             <td th:text="${tempPart.price}">1</td>
             <td th:text="${tempPart.inv}">1</td>

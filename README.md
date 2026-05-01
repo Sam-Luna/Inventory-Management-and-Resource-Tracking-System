@@ -2,7 +2,7 @@
 ## CHANGES MADE FOR EACH PART OF THE PROJECT.
 
 
-### C. I made the following changes to the file <b>mainscreen.html</b>:
+### TASK C. I made the following changes to the file <b>mainscreen.html</b>:
 
 
 - Line 15-21: I added a background image to the page. For this I also had to create a separate folder to store the images I will be using on the project. This folder is located in : D287 - Java\images
@@ -11,7 +11,7 @@
 - Line 51-143: I added the names of the parts to the table along with the prices, and changed the background color of the table.
 - Line 193-247: I added the names of the proucts and their costs to the table, and changed the background color of the table.
 
-### D. I created a new file <b>about.html</b> and made the following:
+### TASK D. I created a new file <b>about.html</b> and made the following:
 - Line 1-12: Initialized file properly and created a <head> section.
 - Line 13-137: I created < style > tags and within those tags I edited and formatted the page's contents with CSS, including:
     >- 13-20: I added a and styled the background image for the entire page.
@@ -29,7 +29,7 @@
 - Line 109-135: I styled the button I added to the page. I changed the color, the edges, and added effects on hover. 
 
 
-###  E. I made the following changes to the file <b>BootStrapData.java</b>:
+### TASK E. I made the following changes to the file <b>BootStrapData.java</b>:
 - Line 44: I created an IF statement that ensures my sample inventory for Inhouse and Oursource parts is only added if the partRepository is empty. This is done to prevent multiplicate items.
 - Line 46-51: I created 6 InhousePart objects. I created 6 because my company sells PC components and the InhouseParts are the peripheral components needed for a PC build.
 - Line 55-89: I initialized each of the InhousePart objects I created. This was done by setting the id, name, price and inventory for each part. I also saved each one to the partRepository.
@@ -41,7 +41,7 @@
 I also made a change to the <b>mainscreen.html</b> page:
 - Line 97-197: When I first started the project, the instructions for part C called for the user interface to include the names of the parts. I did this by copying the existing code that created a row for the parts. I then reused this code to manually add each part needed into the html file to be displayed. However, since part E required me to add these parts using Java, I commented out the blocks of code from part A. 
 
-### F. I made the following changes to the following files:
+### TASK F. I made the following changes to the following files:
 
 #### <b>mainscreen.html</b>
 - Line 137-138: I created a new button to buy a product next to the update and delete buttons.
@@ -54,7 +54,7 @@ I also made a change to the <b>mainscreen.html</b> page:
 
 I also created two new files under the <b>templates</b> folder: <b>Failure.html</b> and <b>Success.html</b>: these are the pages the user will be directed to depending on which conditions are met in the IF statement when pressing the "buy now" button.
 
-### G. I made the following changes to the following files:
+### TASK G. I made the following changes to the following files:
 
 #### mainscreen.html:
 - Line 82-83: I added 2 new columns to the PC Components table; for the minimum and maximum inventory.
@@ -85,10 +85,17 @@ And added constraint validators to ensure an error message was returned to the u
 #### application.properties:
 I change the name of the file the persistent storage is saved to every time I make an update.
 
+### TASK H: 
+#### The following requirements were met when I completed task G:
+- Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
+- Display error messages when adding and updating parts if the inventory is greater than the maximum.
+
+#### To display error message for low inventory when adding and updating products lowers the part inventory below the minimum I did the following:
+I edited the <b>productForm.html</b> file:
+- Line 
+
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
-•  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
-•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
