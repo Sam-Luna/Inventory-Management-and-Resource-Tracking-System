@@ -13,11 +13,11 @@ import java.lang.annotation.Target;
  *
  *
  */
-@Constraint(validatedBy = {EnufPartsValidator.class})
+@Constraint(validatedBy = {InventoryValidator.class})
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ValidEnufParts {
-    String message() default "Not enough inventory available to update the product.";
+public @interface ValidInventory {
+    String message() default "Inventory Error!";
     Class<?> [] groups() default {};
     Class<? extends Payload> [] payload() default {};
 

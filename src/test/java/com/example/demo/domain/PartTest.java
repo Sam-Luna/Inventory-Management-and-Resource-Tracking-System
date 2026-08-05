@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Project: demoDarbyFrameworks2-master
@@ -155,5 +156,25 @@ class PartTest {
         partIn.setId(1l);
         partOut.setId(1l);
         assertEquals(partIn.hashCode(),partOut.hashCode());
+    }
+    // Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+    @Test
+    void testMinInv(){
+        int min = 0;
+        partIn.setMinInv(min);
+        assertEquals(partIn.getMinInv(), min);
+
+        partOut.setMinInv(min);
+        assertEquals(partOut.getMinInv(), min);
+    }
+
+    @Test
+    void testMaxInv(){
+        int max = 100;
+        partIn.setMaxInv(max);
+        assertEquals(partIn.getMaxInv(), max);
+
+        partOut.setMaxInv(max);
+        assertEquals(partOut.getMaxInv(), max);
     }
 }

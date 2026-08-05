@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- background image-->
+    <style>
+        body {
+            background-image: url('/images/motherboard.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .box{
+            justify-content: center;
+            gap: 50px;
+            padding: 200px;
+        }
+    </style>
+
+    <title>Failure to complete purchase.</title>
+    <style> h1 { font-family: "Candara"; font-weight: bold; color: rgb(255 255 255); text-align: center; font-size: 4rem;
+    }</style>
+
+    <style> h2 { font-family: 'Malgun Gothic Semilight'; color: white; text-align: center;} </style>
+    <style> form { font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;} </style>
+    <!--styling for buttons-->
+    <style>
+        .button{
+            margin-left:  45%;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            font-family: "Malgun Gothic";
+            font-size: 20px;
+            color: #8056bb;
+            border: none;
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+        .button:hover{
+            color: white;
+            background-color: #8056bb;
+            transition-duration: 0.5s;
+        }
+    </style>
+
+</head>
+<body>
+<div class="Title" style="background-color: rgb(128 86 187 / 0.86); position: relative; height: 120px ;">
+    <br>
+    <h1 style="font-size: 50px">Failure to complete purchase</h1>
+</div>
+<div class="box">
+<div class="container" style="background-color: rgb(128 86 187 / 0.44) " >
+    <hr>
+    <h2><br>Your purchase was not completed. It looks like the item you want is no longer in stock.<br>
+        <br> Check out our other products!</h2>
+<br>
+<!-- button back to the mainscreen-->
+<div style="position:flex">
+    <form th:action="@{/mainscreen}">
+    <button class= "button" name="products"> Back to Products </button>
+    </form>
+    <br>
+</div>
+</div>
+</body>
+</html>
